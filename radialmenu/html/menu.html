@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     
@@ -31,7 +31,7 @@
                 if (event.data.type == 'init') {
                     // Set global keybind and resource name
                     menuKeybind = event.data.data.keybind;
-                    resourceName = event.data.resourceName
+                    //resourceName = event.data.resourceName
 
                     // Get number of wheels and create array to hold them
                     numWheels = event.data.data.wheels.length;
@@ -88,10 +88,10 @@
                             // Add events for both navSlice and navTitle
                             const execCmd = wheelData.commands[j]
                             wheels[i].navItems[j].navSlice.mousedown(function () {
-                                $.post('http://'+resourceName+'/sliceclicked', JSON.stringify({command: execCmd}));
+                                $.post(`https://${GetParentResourceName()}/sliceclicked`, JSON.stringify({command: execCmd}));
                             });
                             wheels[i].navItems[j].navTitle.mousedown(function () {
-                                $.post('http://'+resourceName+'/sliceclicked', JSON.stringify({command: execCmd}));
+                                $.post(`https://${GetParentResourceName()}/sliceclicked`, JSON.stringify({command: execCmd}));
                             });
                         }
 
@@ -114,7 +114,7 @@
             window.addEventListener("keyup", function onEvent(event) {
                 // Close menu when key is released
                 if (event.key === menuKeybind) {
-                    $.post('http://'+resourceName+'/closemenu', JSON.stringify({}));
+                    $.post(`https://${GetParentResourceName()}/closemenu`, JSON.stringify({}));
                 }
             });
         });
