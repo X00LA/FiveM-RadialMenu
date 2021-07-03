@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'bepo13'
 description 'FiveM Radial Menu'
-version '1.2.1'
+version '1.2.3'
 
 client_script {
     "config.lua",
