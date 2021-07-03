@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     
-    <script type="text/javascript" src="raphael.min.js"></script>
-    <script type="text/javascript" src="wheelnav.min.js"></script>
+    <script type="text/javascript" src="js/raphael.min.js"></script>
+    <script type="text/javascript" src="js/wheelnav.min.js"></script>
     <script type="text/javascript" src="nui://game/ui/jquery.js"></script>
 
     <!-- Default CSS styles -->
@@ -31,7 +31,6 @@
                 if (event.data.type == 'init') {
                     // Set global keybind and resource name
                     menuKeybind = event.data.data.keybind;
-                    //resourceName = event.data.resourceName
 
                     // Get number of wheels and create array to hold them
                     numWheels = event.data.data.wheels.length;

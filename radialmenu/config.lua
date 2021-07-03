@@ -71,7 +71,7 @@ menuConfigs = {
                     navAngle = 270,                 -- Oritentation of wheel
                     minRadiusPercent = 0.4,         -- Minimum radius of wheel in percentage
                     maxRadiusPercent = 0.9,         -- Maximum radius of wheel in percentage
-                    labels = {"imgsrc:engine.png", "imgsrc:key.png", "imgsrc:doors.png", "imgsrc:trunk.png", "imgsrc:hood.png"},
+                    labels = {"imgsrc:img/car_control/engine.png", "imgsrc:img/car_control/key.png", "imgsrc:img/car_control/doors.png", "imgsrc:img/car_control/trunk.png", "imgsrc:img/car_control/hood.png"},
                     commands = {"engine", "lock", "rdoors", "trunk", "hood"}
                 }
             }
